@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page de connexion</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header> 
+      <img src="Logo.png" alt="chat icon" />
+    <nav class="navigation">
+      <button class="btnConnexion_popup">Connexion </button>
+
+    </nav>
+    </header>
+
+
+    <div class="wrapper">
+      <span class="icon_close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form_box connexion">
+        <h2>Connexion</h2>
+        <form action="#">
+          <div class="input_box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input type="identifiant" required>
+            <label>Identifiant</label>
+          </div>
+              <div class="input_box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Mot de passe</label>
+              </div>
+              <button type="submit" class="btn">Valider</button>
+              <button type="submit" class="btn">Annuler</button>
+        </form>
+      </div>
+    </div>
+    <script>
+    const icon_close = document.querySelector('.icon_close');
+    const wrapper = document.querySelector('.wrapper');
+    const btnConnexion_popup = document.querySelector('.btnConnexion_popup');
+    btnConnexion_popup.addEventListener('click', ()=>{wrapper.classList.add('active-popup');});
+    icon_close.addEventListener('click', ()=>{wrapper.classList.remove('active-popup');});
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+     
+ 
+
+
